@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DashBoard"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20.80dp"
+        android:paddingLeft="52.00dp"
+        android:paddingRight="52.00dp">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/hamburger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hamburger"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/money"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins"
+                android:text="₱32,200.00"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:gravity="center"
+            />
+
+            <ImageView
+                android:id="@+id/bell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bell"
+                android:layout_marginStart="16dp" />     <!-- Changed to layout_marginStart for LTR support -->
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Total Balance"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            android:textColor="#6B5E5E"
+            android:gravity="center"
+            android:layout_below="@+id/header"
+            />
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_below="@id/balance"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            >-->
+
+<!--            <Button-->
+<!--                android:id="@+id/expenses"-->
+<!--                android:layout_width="92dp"-->
+<!--                android:layout_height="33dp"-->
+<!--                android:background="@drawable/btn_login_border"-->
+<!--                android:text="Expenses"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="10sp"-->
+
+<!--                android:visibility="visible"-->
+<!--                tools:ignore="MissingConstraints"-->
+<!--                tools:layout_editor_absoluteX="-1dp"-->
+<!--                tools:layout_editor_absoluteY="0dp" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/income"-->
+<!--                android:layout_width="92dp"-->
+<!--                android:layout_height="33dp"-->
+<!--                android:background="@drawable/btn_login_border"-->
+<!--                android:text="Income"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="10sp"-->
+<!--                android:visibility="visible"-->
+<!--                tools:ignore="MissingConstraints"-->
+<!--                tools:layout_editor_absoluteX="139dp"-->
+<!--                tools:layout_editor_absoluteY="0dp" />-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+        <LinearLayout
+            android:layout_below="@+id/balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent"
+            android:padding="0dp"
+            android:layout_margin="0dp">
+
+            <!-- Left Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_expenses"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Expenses"
+                android:textAllCaps="false"
+                android:textSize="12dp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/left_button" />
+
+            <!-- Right Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_income"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Income"
+                android:textAllCaps="false"
+                android:textSize="12dp"
+                android:layout_marginRight="30dp"
+                android:textColor="#000000"
+                android:background="@drawable/right_button" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_september"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="September"
+                android:textSize="10dp"
+                android:textAllCaps="false"
+                android:drawableRight="@drawable/button_arrowdown"
+                android:textColor="#000000"
+                android:background="@drawable/date_button"
+                android:drawablePadding="8dp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
